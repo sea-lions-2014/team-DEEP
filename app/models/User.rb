@@ -3,7 +3,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_many :captions
+  has_many :captions, :images
 
   attr_accessible :name, :password
   validates :name, :password, presence: true
