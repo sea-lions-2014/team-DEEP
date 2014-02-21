@@ -3308,3 +3308,329 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 17:57:41 -0800
 Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-02-20 18:00:47 -0800
+Processing by ImagesController#new as HTML
+  Rendered images/new.html.erb within layouts/application (2.8ms)
+Compiled application.css  (0ms)  (pid 26562)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:00:47 -0800
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:47 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:47 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:47 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-02-20 18:00:48 -0800
+Processing by ImagesController#new as HTML
+  Rendered images/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:00:48 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:48 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:48 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-02-20 18:00:59 -0800
+Processing by ImagesController#new as HTML
+  Rendered images/new.html.erb within layouts/application (2.2ms)
+Compiled application.css  (0ms)  (pid 26562)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:00:59 -0800
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:59 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:59 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:00:59 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-02-20 18:01:27 -0800
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uaFi7HK+bsnNWq157tf5TqFUrdluOXkCCZnIz9PXO3w=", "image"=>{"url"=>"http://www.123callingalldogs.com/savedimages/macexplorer_com-puppy-dog-26.jpg", "title"=>"PUPPY"}, "commit"=>"Create Image"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "images" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "PUPPY"], ["url", "http://www.123callingalldogs.com/savedimages/macexplorer_com-puppy-dog-26.jpg"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/images/18
+Completed 302 Found in 19ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/images/18" for 127.0.0.1 at 2014-02-20 18:01:27 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  Rendered images/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:01:27 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:01:27 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:01:27 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:01:27 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/18" for 127.0.0.1 at 2014-02-20 18:02:22 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1  [["id", "18"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 26562)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:02:22 -0800
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:22 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:22 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:22 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/18" for 127.0.0.1 at 2014-02-20 18:02:34 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 26562)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:34 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:02:34 -0800
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:34 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:34 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/18" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1  [["id", "18"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 26562)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/18" for 127.0.0.1 at 2014-02-20 18:02:56 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 26562)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:02:56 -0800
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:56 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:56 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:02:56 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-02-20 18:03:30 -0800
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uaFi7HK+bsnNWq157tf5TqFUrdluOXkCCZnIz9PXO3w=", "image"=>{"url"=>"http://www.123callingalldogs.com/savedimages/macexplorer_com-puppy-dog-26.jpg", "title"=>"PUPPY"}, "commit"=>"Create Image"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "images" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "PUPPY"], ["url", "http://www.123callingalldogs.com/savedimages/macexplorer_com-puppy-dog-26.jpg"]]
+  [1m[35m (15.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/images/19
+Completed 302 Found in 19ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/images/19" for 127.0.0.1 at 2014-02-20 18:03:30 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1[0m  [["id", "19"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:03:30 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:03:30 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:03:30 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:03:30 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-02-20 18:04:34 -0800
+Processing by ImagesController#new as HTML
+  Rendered images/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:04:34 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:04:34 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:04:34 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:04:34 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-02-20 18:05:22 -0800
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uaFi7HK+bsnNWq157tf5TqFUrdluOXkCCZnIz9PXO3w=", "image"=>{"url"=>"http://dzm1iu7iury1r.cloudfront.net/wp-content/uploads/2012/11/golden-retreiver-puppies.jpeg", "title"=>"the puppies!!!"}, "commit"=>"Create Image"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "images" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "the puppies!!!"], ["url", "http://dzm1iu7iury1r.cloudfront.net/wp-content/uploads/2012/11/golden-retreiver-puppies.jpeg"]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/images/20
+Completed 302 Found in 19ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/images/20" for 127.0.0.1 at 2014-02-20 18:05:22 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1[0m  [["id", "20"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:05:22 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:05:22 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:05:22 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:05:22 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-02-20 18:07:05 -0800
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uaFi7HK+bsnNWq157tf5TqFUrdluOXkCCZnIz9PXO3w=", "image"=>{"url"=>"http://media-cache-ec0.pinimg.com/736x/26/42/a3/2642a3ca01fa975bcf922065748528ad.jpg", "title"=>"Bye Buddy!"}, "commit"=>"Create Image"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "images" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "Bye Buddy!"], ["url", "http://media-cache-ec0.pinimg.com/736x/26/42/a3/2642a3ca01fa975bcf922065748528ad.jpg"]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/images/21
+Completed 302 Found in 18ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/images/21" for 127.0.0.1 at 2014-02-20 18:07:05 -0800
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = $1 LIMIT 1[0m  [["id", "21"]]
+  Rendered images/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-20 18:07:05 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-20 18:07:05 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-20 18:07:05 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-20 18:07:05 -0800
+Served asset /application.js - 304 Not Modified (0ms)
