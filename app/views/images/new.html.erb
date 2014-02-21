@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Upload an Image!</h1>
-<%= form_for @image do |f|%>
+<%= form_for [@user, @image] do |f|%>
   <%= f.label :url %>
   <%= f.text_field :url %>
   <%= f.label :title %>
