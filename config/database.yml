@@ -1,6 +1,7 @@
 
 development:
   adapter: postgresql
+  database: entitle_dev
   pool: 5
   timeout: 5000
 
