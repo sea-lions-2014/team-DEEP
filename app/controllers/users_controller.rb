@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(params[:user])
+    if !params[:user][:password].empty?
+      @user = User.new(params[:user])
+      @user.save!
+    # else
+    #   render new_user_path
+    end
   end
 
 end

@@ -4,9 +4,10 @@ class User < ActiveRecord::Base
   include BCrypt
 
   has_many :captions
-
   attr_accessible :name, :password
-  validates :name, :password, presence: true
+  validates :name, presence: true
+
+
 
   def password
     @password ||= Password.new(password_hash)

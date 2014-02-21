@@ -17,7 +17,6 @@ describe "user auth" do
       fill_in 'Name', with: user.name
       expect{click_on 'Create User'}.to change{User.count}.by(0)
     end
-
   end
 
 end
