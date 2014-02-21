@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-
+gem 'bcrypt-ruby'
 gem 'pg'
 
 gem 'bcrypt-ruby'
