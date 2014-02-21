@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    p params
     User.create(params[:user])
   end
 
