@@ -25,7 +25,7 @@ end
 ActiveRecord::Schema.define(:version => 20140221010222) do
 
   create_table "images", :force => true do |t|
-    t.string "url"
+    t.text   "url"
     t.string "title"
   end
 
