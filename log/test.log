@@ -828,3 +828,95 @@ Completed 200 OK in 111ms (Views: 3.0ms | ActiveRecord: 104.5ms)
   [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'entitle_test'[0m
   [1m[35m (3.7ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
   [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+Started GET "/users/new" for 127.0.0.1 at 2014-02-20 17:59:39 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (329.8ms)
+Completed 200 OK in 340ms (Views: 339.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Started POST "/users" for 127.0.0.1 at 2014-02-20 17:59:39 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Name1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.6ms)[0m  [1mINSERT INTO "users" ("created_at", "name", "password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 21 Feb 2014 01:59:39 UTC +00:00], ["name", "Name1"], ["password", "password1"], ["updated_at", Fri, 21 Feb 2014 01:59:39 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered users/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 6.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'entitle_test'[0m
+  [1m[35m (3.0ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (2.5ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Started GET "/users/new" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (331.4ms)
+Completed 200 OK in 341ms (Views: 340.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Started POST "/users" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Name1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "users" ("created_at", "name", "password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 21 Feb 2014 02:02:48 UTC +00:00], ["name", "Name1"], ["password", "password1"], ["updated_at", Fri, 21 Feb 2014 02:02:48 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered users/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 6.1ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'entitle_test'[0m
+  [1m[35m (4.8ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+Started GET "/users/new" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+Started POST "/users" for 127.0.0.1 at 2014-02-20 18:02:48 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Name2", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (2.6ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Started GET "/users/new" for 127.0.0.1 at 2014-02-20 18:13:20 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (330.9ms)
+Completed 200 OK in 341ms (Views: 340.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Started POST "/users" for 127.0.0.1 at 2014-02-20 18:13:21 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Name1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "users" ("created_at", "name", "password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 21 Feb 2014 02:13:21 UTC +00:00], ["name", "Name1"], ["password", "password1"], ["updated_at", Fri, 21 Feb 2014 02:13:21 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered users/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 6.3ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'entitle_test'[0m
+  [1m[35m (5.0ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+Started GET "/users/new" for 127.0.0.1 at 2014-02-20 18:13:21 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" 
+Started POST "/users" for 127.0.0.1 at 2014-02-20 18:13:21 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Name2", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (2.2ms)[0m  [1mTRUNCATE TABLE "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
