@@ -8,7 +8,21 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(params[:user])
+   unless params[:user][:password].empty?
+      @user = User.new(params[:user])
+      @user.save
+      redirect_to user_path @user
+    else
+      redirect_to new_user_path
+    end
+  end
+
+  def show
+    if logged_in?
+      render 'show'
+    else
+      redirect_to root_path
+    end
   end
 
 end
