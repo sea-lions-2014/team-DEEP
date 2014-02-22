@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "user auth", js: true do
+describe "user auth" do
 
   context "sign up" do
     let!(:user){ build :user }
@@ -50,8 +50,7 @@ describe "user auth", js: true do
 
     it "should log a user out" do
       click_on 'Sign out'
-      # visit user_path, id: user.id
-      # expect(response).to be 403
+      expect(current_path).to eq root_path
     end
   end
 
