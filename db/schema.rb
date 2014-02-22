@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(:version => 20140221034349) do
   end
 
   create_table "images", :force => true do |t|
-    t.text   "url"
-    t.string "title"
+    t.integer "user_id"
+    t.text    "url"
+    t.string  "title"
   end
 
   create_table "users", :force => true do |t|

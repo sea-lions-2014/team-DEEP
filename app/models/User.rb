@@ -3,9 +3,10 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_many :captions, :images
+  has_many :captions
+  has_many :images
 
-  attr_accessible :name, :password
+  attr_accessible :name, :password, :id
   validates :name, :password, presence: true
 
   def password

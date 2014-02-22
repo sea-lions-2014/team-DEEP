@@ -4,7 +4,6 @@ gem 'rails', '3.2.14'
 gem 'bcrypt-ruby'
 gem 'pg'
 
-gem 'bcrypt-ruby'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -29,3 +28,5 @@ group :test do
   gem 'database_cleaner'
 end
 
+
+gem 'debugger'
