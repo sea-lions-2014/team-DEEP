@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   has_many :captions
   attr_accessible :name, :password
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 
 
 
@@ -18,5 +18,13 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
+
+  def self.authenticate session_params
+    if user = User.find_by_name(session_params[:name])
+      return user if user.password == session_params[:password]
+    else
+      return false
+    end
+  end
 
 end
