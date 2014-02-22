@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20140221034349) do
   create_table "captions", :force => true do |t|
     t.text     "body"
     t.integer  "user_id"
+    t.integer  "image_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

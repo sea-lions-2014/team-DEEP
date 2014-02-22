@@ -3,6 +3,7 @@ class CreateCaptions < ActiveRecord::Migration
     create_table :captions do |t|
       t.text :body
       t.belongs_to :user
+      t.belongs_to :image
       t.timestamps
     end
   end

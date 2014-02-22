@@ -3,3 +3,14 @@
 <img src="<%= @image.url  %>" title="<%= @image.title %>">
 </div>
 
+<div class="captions">
+  <%= form_for @caption, url: image_captions_path(@image), remote: true do |f|  %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <%= f.submit %>
+  <% end %>
+  <% @image.captions.each do |caption| %>
+    <%= render 'captions/caption', :caption => caption %>
+  <% end %>
+
+</div>

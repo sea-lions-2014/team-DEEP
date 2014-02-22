@@ -5,4 +5,8 @@ Entitle::Application.routes.draw do
   resources :users do
     resources :images, only: [:new, :create, :show]
   end
+
+  resources :images do
+    resources :captions, only: [:new, :create, :show]
+  end
 end
