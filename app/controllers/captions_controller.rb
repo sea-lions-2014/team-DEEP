@@ -6,7 +6,7 @@ class CaptionsController < ApplicationController
     if @caption.save
       render partial: 'caption', locals: {caption: @caption}
     else
-      redirect :back
+      redirect_to 'images#show'
     end
   end
 end

@@ -25,7 +25,7 @@ describe ImagesController do
     let(:image) { build :image }
 
     before :each do
-      get :create, user_id: user.id, image: { title: image.title, url: image.url }
+      post :create, user_id: user.id, image: { title: image.title, url: image.url }
     end
 
     it "should find the logged in user" do
@@ -38,7 +38,7 @@ describe ImagesController do
     end
 
     it "should not save an image with invalid params" do
-      get :create, user_id: user.id, image: { title: image.title }
+      post :create, user_id: user.id, image: { title: image.title }
       expect(assigns(:image).save).to be false
     end
   end
