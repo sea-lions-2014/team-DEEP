@@ -18,7 +18,6 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
     @caption = Caption.new
-    @user = @image.user
   end
 
 end
