@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :images
 
   attr_accessible :name, :password
-  validates :name, :password, presence: true
+  validates :name, presence: true
 
 
   def password
