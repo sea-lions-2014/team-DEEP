@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe "image posting", :js => true do
-  let!(:user) { User.create! name: 'Bill', password: 'password' }
-  let!(:image) { Image.create! title: 'Puppy', url:'http://www.puppy.com', user_id: user.id }
+  let!(:user) { create :user }
+  let!(:image) { create :image }
 
   context "on new image form page" do
 
     it "creates new image" do
       visit new_user_image_path(user)
-      click_on('Load Image')
-      # expect(current_path).to eq user_image_path(user.id, image)
+      fill_in 'image_url', with: image.url
+      fill_in 'image_title', with: image.title
       expect{click_on 'Load Image'}.to change{Image.count}.by(1)
     end
   end
@@ -20,8 +20,5 @@ describe "image posting", :js => true do
       expect(page).to have_content(image.title)
     end
   end
-
-
-
 
 end
