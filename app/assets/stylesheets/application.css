@@ -9,3 +9,11 @@ img{
   border: 5px ridge grey;
 
 }
+
+nav{
+  padding-left: 10px;
+}
+
+h2{
+  text-align: center;
+}

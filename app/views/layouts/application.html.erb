@@ -14,7 +14,7 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= content_for?(:title) ? yield(:title) : "Entitle" %></title>
 
   	<%= stylesheet_link_tag    "foundation_and_overrides" %>
     <%= stylesheet_link_tag    "application" %>
@@ -24,11 +24,11 @@
 
   <body>
 
+
+<nav class="top-bar" data-topbar>
+  <%= render 'sessions/navbar' %>
+</nav>
     <%= yield %>
-
-
-<%= render 'sessions/navbar' %>
-
 
     <%= javascript_include_tag "application" %>
   </body>
