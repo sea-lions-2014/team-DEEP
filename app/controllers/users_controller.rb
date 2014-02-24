@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     if logged_in?
       @user = User.find(params[:id])
       @images = @user.images
+
       render 'show'
     else
       redirect_to root_path
