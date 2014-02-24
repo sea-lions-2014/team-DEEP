@@ -52,6 +52,51 @@ h1{
 }
 
 .th{
-  width:175px;
+  width:100px;
   margin:20px;
+}
+
+.wrap{
+  margin: 0 auto;
+  border: 2px solid black;
+  margin: 1em;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+#thumb{
+  display: inline-block;
+  font-weight: bold;
+}
+
+#thumb img{
+  z-index: 1;
+}
+
+#txt{
+  z-index: 10;
+}
+
+.vote-link{
+  display: inline-block;
+  float: right;
+  margin-right:30px;
+  margin-left: 20px;
+}
+
+.caption-score{
+  color:red;
+  font-size: 1.2em;
+  text-align: right;
+  display: inline-block;
+  float: right;
+}
+
+.caption-body{
+  text-align: center;
+  display: inline-block;
+  margin-right: 2em;
 }

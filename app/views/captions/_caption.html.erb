@@ -2,12 +2,10 @@
   <div class="large-3 columns"><p> </p></div>
   <div class="large-6 columns">
     <div class="caption">
-      <%= caption.body %>
+      <div class="caption-body"><%= caption.body %></div>
+      <div class="vote-link"><%= link_to 'Vote Up', vote_up_caption_path(@image, caption), remote: true, method: :put, class: 'vote-up' %></div>
+      <div class='caption-score'><%= caption.score %></div>
     </div>
   </div>
   <div class="large-3 columns"></div>
-<div class="caption">
-  <%= caption.body %>
-  <%= link_to 'Vote Up', vote_up_caption_path(@image, caption), remote: true, method: :put, class: 'vote-up' %>
-  <div class='caption-score'><%= caption.score %></div>
 </div>

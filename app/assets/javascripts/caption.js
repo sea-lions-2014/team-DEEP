@@ -12,7 +12,7 @@ var Caption = {
   voteBinder: function(){
     $('.captions').on('click', '.vote-up', function(){
       $(this).on('ajax:success', function(event, data, status, xhr){
-        $(this).next().text(data.score)
+        $(this).parent().next().text(data.score)
       });
     })
   }
@@ -21,4 +21,3 @@ var Caption = {
 $(document).ready(function(){
   Caption.init();
 })
-

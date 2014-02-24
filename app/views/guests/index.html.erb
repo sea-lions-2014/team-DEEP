@@ -1,4 +1,19 @@
 
 <h1>What are the captions of these photos?</h1>
 <h2>You're Entitled to your own opinion.</h2>
+<div class="container">
+<div class="wrap">
+<h3>Top</h3>
+<%= render 'images_list', images_list: @top_images %>
+</div>
+
+<div class="wrap">
+<h3>New</h3>
+<%= render 'images_list', images_list: @new_images %>
+</div>
+
+<div class="wrap">
+<h3>Hot</h3>
 <%= render 'images_list', images_list: @hot_images %>
+</div>
+</div>
