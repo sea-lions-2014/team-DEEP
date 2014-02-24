@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   has_many :captions
   has_many :images
+  has_many :votes
 
   attr_accessible :name, :password
   validates :name, presence: true
