@@ -6,4 +6,8 @@
     </div>
   </div>
   <div class="large-3 columns"></div>
+<div class="caption">
+  <%= caption.body %>
+  <%= link_to 'Vote Up', vote_up_caption_path(@image, caption), remote: true, method: :put, class: 'vote-up' %>
+  <div class='caption-score'><%= caption.score %></div>
 </div>
