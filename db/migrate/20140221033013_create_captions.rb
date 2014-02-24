@@ -4,6 +4,7 @@ class CreateCaptions < ActiveRecord::Migration
       t.text :body
       t.belongs_to :user
       t.belongs_to :image
+      t.integer :score, default: 0
       t.timestamps
     end
   end

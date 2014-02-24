@@ -9,11 +9,21 @@
 <body>
 
 
+  <ul>
+    <li><%= link_to 'Home', root_url %></li>
+    <% if logged_in? %>
+      <li><%= link_to 'Sign out', logout_path, method: :delete %></li>
+      <li><%= link_to 'My Profile', user_path(User.find(session[:id])) %></li>
+      <li><%= link_to 'Post an Image', new_user_image_path(User.find(session[:id])) %></li>
+    <% else %>
+      <li><%= link_to 'Sign In', login_path %></li>
+      <li><%= link_to 'Register', new_user_path %></li>
+    <% end %>
+  </ul>
+
+
 <%= yield %>
 
-<% if logged_in? %>
-  <%= link_to 'Sign out', logout_path, method: :delete %>
-<% end %>
 
 </body>
 </html>
