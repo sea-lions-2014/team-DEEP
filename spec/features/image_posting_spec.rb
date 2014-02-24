@@ -7,12 +7,11 @@ describe "image posting", :js => true do
     it "creates new image" do
       visit new_user_image_path(user)
       click_on('Create Image')
-      expect(current_path).to eq user_image_path(user, Image.last)
+      expect(current_path).to eq user_image_path(user.id, Image.last)
     end
   end
   context "on image display page" do
     it "displays an image by id" do
-      puts image.inspect
       visit user_image_path(user, image)
       expect(page).to have_content(image.title)
     end

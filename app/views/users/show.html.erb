@@ -1,0 +1,9 @@
+<h1>Your Posts</h1>
+
+<ul>
+  <% if @images %>
+    <% @images.each do |image| %>
+      <li><%= link_to image.title, user_image_path(image) %></li>
+    <% end %>
+  <% end %>
+</ul>

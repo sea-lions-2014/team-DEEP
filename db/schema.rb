@@ -17,14 +17,17 @@ ActiveRecord::Schema.define(:version => 20140221034349) do
     t.text     "body"
     t.integer  "user_id"
     t.integer  "image_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "score",      :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "images", :force => true do |t|
-    t.integer "user_id"
-    t.text    "url"
-    t.string  "title"
+    t.integer  "user_id"
+    t.text     "url"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
