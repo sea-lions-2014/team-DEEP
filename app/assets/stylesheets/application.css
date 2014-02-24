@@ -38,7 +38,10 @@ h1{
   border: 5px solid #E6E6E6;
   border-radius: 3px;
   font-size: 1.2em;
+
 }
+
+
 
 .hometitle{
   color: white;
@@ -54,4 +57,25 @@ h1{
 .th{
   width:175px;
   margin:20px;
+}
+
+.vote-link{
+  display: inline-block;
+  float: right;
+  margin-right:30px;
+  margin-left: 20px;
+}
+
+.caption-score{
+  color:red;
+  font-size: 1.2em;
+  text-align: right;
+  display: inline-block;
+  float: right;
+}
+
+.caption-body{
+  text-align: center;
+  display: inline-block;
+  margin-right: 2em;
 }
