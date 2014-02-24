@@ -9,7 +9,7 @@ class ImagesController < ApplicationController
     @user = User.find(params[:user_id])
     @image = @user.images.build(params[:image])
     if @image.save
-      redirect_to user_image_path(@user, @image)
+      redirect_to user_image_path(@user.id, @image.id)
     else
       render :new
     end

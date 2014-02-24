@@ -4,6 +4,8 @@ class CreateImages < ActiveRecord::Migration
       t.belongs_to :user
       t.text :url
       t.string :title
+
+      t.timestamps
     end
   end
 end
