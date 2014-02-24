@@ -6,7 +6,7 @@
 
 img{
   width:600px;
-  border: 5px ridge grey;
+  border: 3px solid black;
 
 }
 
@@ -16,4 +16,8 @@ nav{
 
 h2{
   text-align: center;
+}
+
+.captions{
+  padding-top: 20px;
 }
