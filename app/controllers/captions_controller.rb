@@ -13,7 +13,11 @@ class CaptionsController < ApplicationController
   def vote_up
     @caption = Caption.find(params[:id])
     @image = @caption.image
-    @caption.increment!(:score, 1)
-    render json: {score: @caption.score}
+    @user = User.find(session[:id])
+    @vote = @user.votes.build(caption_id: @caption.id)
+    if @vote.save
+      @caption.increment!(:score, 1)
+      render json: {score: @caption.score}
+    end
   end
 end
