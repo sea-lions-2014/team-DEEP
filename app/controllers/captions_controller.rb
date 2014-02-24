@@ -9,4 +9,11 @@ class CaptionsController < ApplicationController
       redirect_to 'images#show'
     end
   end
+
+  def vote_up
+    @caption = Caption.find(params[:id])
+    @image = @caption.image
+    @caption.increment!(:score, 1)
+    render json: {score: @caption.score}
+  end
 end

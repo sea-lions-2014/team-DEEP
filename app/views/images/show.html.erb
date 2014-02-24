@@ -8,14 +8,14 @@
   <div class="small-4 large-6 columns">
     <div class="captions">
       <%= form_for @caption, url: image_captions_path(@image), remote: true do |f|  %>
-      <%= f.label "Add Caption"%>
-      <%= f.text_field :body %>
+        <%= f.label "Add Caption"%>
+        <%= f.text_field :body %>
         <div class="small-6 large-3 columns"></div>
 
-      <%= f.submit "Entitle It", :class => "button" %>
+        <%= f.submit "Entitle It", :class => "button" %>
       <% end %>
       <% @image.captions.each do |caption| %>
-      <%= render 'captions/caption', :caption => caption %>
+        <%= render 'captions/caption', :caption => caption %>
       <% end %>
 
     </div>
