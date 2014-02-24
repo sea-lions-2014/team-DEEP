@@ -1,11 +1,20 @@
 var Caption = {
   init: function() {
     $('form#new_caption').on('ajax:success', this.appendCaption)
+    this.voteBinder();
   },
 
-  appendCaption: function(event, data, status, xhr) {
+  appendCaption: function(event, data, status, xhr){
     $('.captions').append(data);
-    $('#caption_body').val('')
+    $('#caption_body').val('');
+  },
+
+  voteBinder: function(){
+    $('.captions').on('click', '.vote-up', function(){
+      $(this).on('ajax:success', function(event, data, status, xhr){
+        $(this).next().text(data.score)
+      });
+    })
   }
 }
 
