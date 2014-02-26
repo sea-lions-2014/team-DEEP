@@ -1,7 +1,5 @@
-require 'bcrypt'
-
 class User < ActiveRecord::Base
-  include BCrypt
+  # has_secure_password
 
   has_many :captions
   has_many :images
@@ -10,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :password
   validates :name, presence: true
 
-
+  # replace lines 12-28 with line 2.
   def password
     @password ||= Password.new(password_hash)
   end

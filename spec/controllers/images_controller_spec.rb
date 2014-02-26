@@ -16,7 +16,7 @@ describe ImagesController do
 
     it "should initialize an empty image with a user id" do
       expect(assigns(:image).user_id).to eq user.id
-      expect(assigns(:image).url).to be_nil
+      expect(assigns(:image)).to be_a_new Image
     end
   end
 
@@ -56,8 +56,7 @@ describe ImagesController do
     end
 
     it "should initialize an empty caption" do
-      expect(assigns(:caption).id).to be_nil
-      expect(assigns(:caption).body).to be_nil
+      expect(assigns(:caption).id).to be_a_new Caption
     end
   end
 

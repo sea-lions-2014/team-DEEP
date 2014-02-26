@@ -1,8 +1,8 @@
 Entitle::Application.routes.draw do
 
-  root to: "guests#index"
+  root to: "images#index"
 
-  resources :users  do
+  resources :users, :except => [:index]  do
     resources :images, only: [:new, :create, :show]
   end
 

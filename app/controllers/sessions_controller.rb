@@ -1,12 +1,11 @@
 class SessionsController < ApplicationController
   def new
-    render 'new'
   end
 
   def create
     if @user = User.authenticate( params[:session] )
-      session[:id] = @user.id
-      redirect_to user_path @user
+      login @user
+      redirect_to @user
     else
       redirect_to login_path
     end

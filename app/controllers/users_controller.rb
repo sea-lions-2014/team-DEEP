@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-
-  def index
-  end
+  before_filter :authenticate_user, :only => [:show]
 
   def new
     @user = User.new
@@ -11,22 +9,15 @@ class UsersController < ApplicationController
    unless params[:user][:password].empty?
       @user = User.new(params[:user])
       @user.save
-      session[:id] = @user.id
-      redirect_to user_path @user
+      login(@user)
+      redirect_to @user
     else
       redirect_to new_user_path
     end
   end
 
   def show
-    if logged_in?
-      @user = User.find(params[:id])
-      @images = @user.images
-
-      render 'show'
-    else
-      redirect_to root_path
-    end
+    @user = User.find(params[:id])
+    @images = @user.images
   end
-
 end

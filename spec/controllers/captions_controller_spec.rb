@@ -19,8 +19,10 @@ describe CaptionsController do
     end
 
     it "does not create a caption with invalid params" do
-      post :create, image_id: image.id, caption: { body: "" }
-      expect(assigns(:caption).save).to be_false
+      expect {
+        post :create, image_id: image.id, caption: { body: "" }
+      }.to_not change { Image.count }
+      # expect(assigns(:caption).save).to be_false
     end
   end
 end
